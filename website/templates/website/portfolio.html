@@ -1,0 +1,15 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="portfolio">
+    <h2>Our Work</h2>
+
+    <div class="portfolio-grid">
+        <img src="{% static 'website/images/p1.jpg' %}">
+        <img src="{% static 'website/images/p2.jpg' %}">
+        <img src="{% static 'website/images/p3.jpg' %}">
+        <img src="{% static 'website/images/p4.jpg' %}">
+    </div>
+</section>
+{% endblock %}

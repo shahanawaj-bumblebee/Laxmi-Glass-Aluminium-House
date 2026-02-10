@@ -1,0 +1,39 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="portfolio">
+    <h2>OUR PORTFOLIO</h2>
+    <p class="subtitle">Showcasing excellence in every project</p>
+
+    <div class="portfolio-grid">
+        <!-- Left Tall Image -->
+        <div class="portfolio-item tall">
+            <img src="{% static 'website/images/p1.jpg' %}" alt="Building Glass Work">
+        </div>
+
+        <!-- Center Two Images -->
+        <div class="portfolio-item">
+            <img src="{% static 'website/images/p2.jpg' %}" alt="Aluminium Window">
+        </div>
+        <div class="portfolio-item">
+            <img src="{% static 'website/images/p3.jpg' %}" alt="Stair Glass Railing">
+        </div>
+
+        <!-- Right Tall Image -->
+        <div class="portfolio-item tall">
+            <img src="{% static 'website/images/p4.jpg' %}" alt="Glass Partition Office">
+        </div>
+    </div>
+</section>
+
+
+<div class="hero-left animate fade-left">
+    ...
+</div>
+
+<div class="hero-right animate fade-right">
+    ...
+</div>
+{% endblock %}

@@ -1,0 +1,327 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laxmi Glass & Aluminium House</title>
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/responsive.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <div class="logo-circle">
+                <img src="{% static 'website/images/logo.png' %}" alt="Laxmi Glass & Aluminium House Logo">
+            </div>
+            <h1 class="brand-text">
+                LAXMI GLASS <span>&</span> ALUMINIUM HOUSE
+            </h1>
+        </div>
+
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about_us' %}">About us</a>
+            <a href="{% url 'products' %}">Products</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'contact_us' %}">Contact Us</a>
+        </nav>
+
+
+
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-left">
+            <h1>
+                Premium<br>
+                Aluminium,<br>
+                Glass & Interior<br>
+                Solutions
+            </h1>
+            <p>
+                We deliver high-quality aluminium fabrication, glass work,
+                and interior design with competitive pricing and
+                on-time execution.
+            </p>
+
+            <div class="buttons">
+                <a href="https://wa.me/918920912449?text=Hello I am interested in your services" target="_blank" <button
+                    class="btn primary"></button>
+                    WhatsApp
+                </a>
+
+
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <img src="{% static 'website/images/hero.jpg' %}" alt="hero">
+            <a href="{% url 'portfolio' %}" class="btn view-work">
+                View Our Work
+            </a>
+
+        </div>
+
+
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio">
+        <h2>OUR PORTFOLIO</h2>
+        <p class="subtitle">Showcasing excellence in every project</p>
+
+        <div class="portfolio-grid">
+            <!-- Left Tall Image -->
+            <div class="portfolio-item tall">
+                <img src="{% static 'website/images/p1.jpg' %}" alt="Building Glass Work">
+            </div>
+
+            <!-- Center Two Images -->
+            <div class="portfolio-item">
+                <img src="{% static 'website/images/p2.jpg' %}" alt="Aluminium Window">
+            </div>
+            <div class="portfolio-item">
+                <img src="{% static 'website/images/p3.jpg' %}" alt="Stair Glass Railing">
+            </div>
+
+            <!-- Right Tall Image -->
+            <div class="portfolio-item tall">
+                <img src="{% static 'website/images/p4.jpg' %}" alt="Glass Partition Office">
+            </div>
+        </div>
+    </section>
+
+
+    <div class="hero-left animate fade-left">
+        ...
+    </div>
+
+    <div class="hero-right animate fade-right">
+        ...
+    </div>
+
+
+    <section class="why-us ">
+        <h2>WHY CHOOSE US</h2>
+        <p class="subtitle">Your trusted partner for quality and reliability</p>
+
+        <div class="why-content">
+            <div class="why-image" data-aos="fade-right">
+                <img src="{% static 'website/images/choose us.jpg' %}" alt="Why Choose Us">
+            </div>
+
+            <div class="why-item" data-aos="zoom-in">
+                <h3>🏗 Expertise You Can Trust</h3>
+                <p>We bring years of hands-on experience in aluminium fabrication, glass solutions, and interior design.
+                    From concept to completion, every project is handled with precision and care.
+                </p>
+            </div>
+
+            <div class="why-item" data-aos="zoom-in" data-aos-delay="150">
+                <h3>💰 Competitive & Transparent Pricing</h3>
+                <p>No hidden costs. No surprises.</p>
+            </div>
+
+            <div class="why-item" data-aos="zoom-in" data-aos-delay="300">
+                <h3 class="highlight">⏰ Service Hours: 24×7 Available</h3>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="services">
+        <h2>Our Services</h2>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="{% static 'website/images/alums.jpg' %}">
+                <h3>Aluminium Windows</h3>
+                <ul>
+                    <li>Windows</li>
+                    <li>Doors</li>
+                    <li>Structural Glazing</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <img src="{% static 'website/images/window.jpg' %}">
+                <h3>Window Glass</h3>
+                <ul>
+                    <li>Toughened Glass</li>
+                    <li>Glass Partitions</li>
+                    <li>Railings</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <img src="{% static 'website/images/acp.jpg' %}">
+                <h3>ACP Sheet</h3>
+                <ul>
+                    <li>ACP Cladding</li>
+                    <li>Aluminium Work</li>
+                    <li>Panel Work</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <img src="{% static 'website/images/hpl.jpg' %}">
+                <h3>HPL Sheet</h3>
+                <ul>
+                    <li>Exterior Cladding</li>
+                    <li>Interior Surfacing</li>
+                    <li>Furniture & Fixtures</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="contact-section" data-aos="fade-up">
+        <div class="contact-container">
+
+            <!-- Left Image -->
+            <div class="contact-image">
+                <img src="{% static 'website/images/contact.jpg' %}">
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="contact-form-wrapper">
+                <h2>Contact Us</h2>
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                    {% csrf_token %}
+
+                    <label>Name <span>*</span></label>
+                    <div class="name-row">
+                        <input type="hidden" name="access_key" value="0ba04290-3d21-48bd-b818-cf62cf36240f">
+                        <input type="text" name="first_name" placeholder="First" required>
+                        <input type="text" name="last_name" placeholder="Last" required>
+                    </div>
+
+                    <label>Email <span>*</span></label>
+                    <input type="email" name="email" placeholder="Email" required>
+
+                    <label>Mobile No. <span>*</span></label>
+                    <input type="Mobile No." name="Mobile No." placeholder="Mobile No." required>
+
+                    <label>Leave us a few words <span>*</span></label>
+                    <textarea name="message" placeholder="Your message..." required></textarea>
+
+                    <button type="submit">SUBMIT</button>
+                </form>
+
+
+                <p id="responseMsg"></p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="testimonials">
+        <h2>WHAT OUR CLIENTS SAY ABOUT US</h2>
+
+        <div class="testimonial-grid">
+            <div class="testimonial-card ">
+                ⭐⭐⭐⭐⭐
+                <p>
+                    “Product Quality are very best, My Home Railing are very strong & Beautiful.”
+                </p>
+                <span>- Rahul </span>
+            </div>
+
+            <div class="testimonial-card ">
+                ⭐⭐⭐⭐⭐
+                <p>
+                    “People love recommended me soo much , By their feedback
+                    i visit and i am Satisfied with their Work ”
+                </p>
+                <span>- Kartik Kumar</span>
+            </div>
+
+            <div class="testimonial-card">
+                ⭐⭐⭐⭐⭐
+                <p>
+                    “Excellent service, professional team and timely delivery.”
+                </p>
+                <span>- Radheshyam Tyagi</span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact-section"></section>
+    <footer class="footer">
+        <div class="footer-grid">
+
+            <div>
+                <div>
+                    <img src="{% static 'website/images/logo.png' %}" class="footer-logo">
+
+                </div>
+
+                <h3>Laxmi Glass & Aluminium House</h3>
+                <p>
+                    Your trusted partner for premium aluminium,
+                    glass, and interior solutions.
+                </p>
+            </div>
+
+            <div>
+                <h4>Our Services</h4>
+                <ul>
+                    <li>Aluminium Windows & Doors</li>
+                    <li>Glass Partitions</li>
+                    <li>ACP Sheet </li>
+                    <li>Glass Railings</li>
+                    <li>HPL Sheet</li>
+                    <li>SS Railing</li>
+                    <li>UPVC Sheet</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contact Us</h4>
+                <p>📞 +91-8920912449</p>
+                <p>📞 +91-7906232665</p>
+                <p>✉️ laxmi@gmail.com</p>
+                <p>📍 GGVR+758, Katheda Rd, Pink City Colony, Dadri, Uttar Pradesh 203207</p>
+            </div>
+
+            <div class="footer-cta">
+                <h2>Let's Build Something<br>Strong & Beautiful<br>Together</h2>
+            </div>
+
+
+        </div>
+    </footer>
+
+
+    <script src="{% static 'website/js/main.js' %}"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 120
+        });
+    </script>
+
+</body>
+
+</html>

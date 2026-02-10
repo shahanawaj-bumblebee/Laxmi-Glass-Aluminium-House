@@ -1,0 +1,50 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+
+{% block content %}
+<section class="contact-section">
+
+    <div class="contact-container">
+
+        <!-- Left Image -->
+        <div class="contact-image">
+            <img src="{% static 'website/images/contact.jpg' %}" alt="Contact Support">
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="contact-form-wrapper">
+            <h2>Contact Us</h2>
+
+             <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                {% csrf_token %}
+
+                <label>Name <span>*</span></label>
+                <div class="name-row">
+                    <input type="hidden" name="access_key" value="0ba04290-3d21-48bd-b818-cf62cf36240f">
+                    <input type="text" name="first_name" placeholder="First" required>
+                    <input type="text" name="last_name" placeholder="Last" required>
+                </div>
+
+                <label>Email <span>*</span></label>
+                <input type="email" name="email" placeholder="Email" required>
+
+                <label>Mobile No. <span>*</span></label>
+                    <input type="Mobile No." name="Mobile No." placeholder="Mobile No." required>
+
+                <label>Leave us a few words <span>*</span></label>
+                <textarea name="message" placeholder="Your message..." required></textarea>
+
+                <button type="submit">SUBMIT</button>
+            </form>
+
+
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
