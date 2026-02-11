@@ -1,0 +1,1 @@
+web: gunicorn laxmiglass_project.wsgi
