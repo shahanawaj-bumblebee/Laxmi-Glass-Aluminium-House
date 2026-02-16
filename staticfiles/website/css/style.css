@@ -8,16 +8,18 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #f8f8f8, #ffffff, #ffffff);
+    background: #ffffff;
     color: #111;
+    padding-top: 110px;
 }
-
 
 section {
     padding: 100px 8%;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 700;
 }
 
@@ -38,21 +40,21 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 8%;
+    padding: 5px 8%;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 800;
+    z-index: 1000;
 
-    background: rgb(255, 255, 255);
+    background: rgb(232, 232, 240);
     backdrop-filter: blur(12px);
-    border-bottom: 2px solid rgb(255, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 .nav-brand {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
 }
 
 .logo-circle {
@@ -72,8 +74,8 @@ h2 {
 }
 
 .brand-text {
-    font-size: 20px;
-    font-weight: 1000;
+    font-size: 30px;
+    font-weight: 800;
     letter-spacing: 1px;
 }
 
@@ -112,12 +114,13 @@ nav a:hover::after {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    margin-top: 40px; /* because navbar fixed */
+    padding: 0;
+    margin: 0;
 }
 
 .slides {
     display: flex;
-    height:80%;
+    height: 100%;
     transition: transform 0.8s ease-in-out;
 }
 
@@ -138,7 +141,7 @@ nav a:hover::after {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0, 0, 0, 0.45);
     top: 0;
     left: 0;
 }
@@ -165,36 +168,26 @@ nav a:hover::after {
     margin-bottom: 30px;
 }
 
-/* WhatsApp Button */
-.whatsapp-btn {
-    background: #006425;
-    color: white;
-    padding: 15px 40px;
-    border-radius: 40px;
-    text-decoration: none;
-    font-weight: 700;
-    display: inline-block;
-    transition: 0.3s;
-}
-
-.whatsapp-btn:hover {
-    background: #1b0ddf;
-}
-
 /* Arrows */
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background: white;
-  
+
     font-size: 22px;
     cursor: pointer;
     z-index: 3;
 }
 
-.prev { left: 20px; }
-.next { right: 20px; }
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
 
 /* Dots */
 .dots {
@@ -227,66 +220,112 @@ nav a:hover::after {
     }
 }
 
+/* HERO BUTTONS */
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 14px 30px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Channel Button */
+.btn-channel {
+    background: #25D366;
+    color: #fff;
+}
+
+.btn-channel:hover {
+    background: #1ebe5d;
+    transform: translateY(-3px);
+}
+
+/* Group Button */
+.btn-group {
+    background: #128C7E;
+    color: #fff;
+}
+
+.btn-group:hover {
+    background: #0e6f63;
+    transform: translateY(-3px);
+}
 
 
 /* ================= PORTFOLIO ================= */
-.portfolio-grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+
+.portfolio {
+    padding: 120px 8%;
+    background: #f4f6f9;
+    text-align: center;
 }
 
-.portfolio-item {
+.portfolio h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.portfolio p {
+    color: #555;
+    margin-bottom: 60px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+/* Card Design */
+.portfolio-card {
+    background: #ffffff;
+    border-radius: 25px;
     overflow: hidden;
-    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
 }
 
-.portfolio-item img {
+/* Image */
+.portfolio-card img {
     width: 100%;
-    border-radius: 25px;
-    transition: 0.4s;
-}
-
-.portfolio-item:hover img {
-    transform: scale(1.1);
-}
-
-.tall {
-    grid-row: span 1;
-}
-
-/* ================= SERVICES ================= */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.service-card {
-    background: #19c9ff;
-    backdrop-filter: blur(12px);
-    padding: 25px;
-    border-radius: 20px;
-    transition: 0.3s;
-    border: 1px solid #000000e9;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    background: rgb(255, 0, 0);
-}
-
-.service-card img {
-    width: 100%;
-    height: 220px;
+    height: 320px;
     object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 20px;
+    transition: transform 0.6s ease;
 }
 
-.service-card ul {
-    list-style: none;
-    color: #000000;
+/* Hover Effects */
+.portfolio-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -312,7 +351,7 @@ nav a:hover::after {
 .contact-image img {
     width: 100%;
     border-radius: 25px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 /* RIGHT FORM */
@@ -321,7 +360,7 @@ nav a:hover::after {
     background: #a5a0a0;
     padding: 50px;
     border-radius: 25px;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
 }
 
 .contact-form-wrapper h2 {
@@ -370,7 +409,7 @@ nav a:hover::after {
 .contact-form textarea:focus {
     border-color: #0072ff;
     background: #ffffff;
-    box-shadow: 0 0 0 3px rgba(0,114,255,0.15);
+    box-shadow: 0 0 0 3px rgba(0, 114, 255, 0.15);
 }
 
 /* SUBMIT BUTTON */
@@ -385,12 +424,12 @@ nav a:hover::after {
     background: linear-gradient(45deg, #00eaff, #0072ff);
     color: #fff;
     transition: 0.3s;
-    box-shadow: 0 10px 25px rgba(0,114,255,0.3);
+    box-shadow: 0 10px 25px rgba(0, 114, 255, 0.3);
 }
 
 .contact-form button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(0,114,255,0.5);
+    box-shadow: 0 15px 35px rgba(0, 114, 255, 0.5);
 }
 
 /* RESPONSIVE */
@@ -409,30 +448,35 @@ nav a:hover::after {
 }
 
 /* ================= TESTIMONIALS ================= */
+.testimonials {
+    padding: 80px 8%;
+    background: #c876db;
+    text-align: center;
+}
+
 .testimonial-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-top: 40px;
 }
 
 .testimonial-card {
-    background: rgb(171, 160, 160);
-    padding: 30px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
-.testimonial-card:hover {
-    transform: scale(1.05);
+.testimonial-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
+
 
 /* ================= FOOTER ================= */
-.footer {
-    background: #00367c;
-    padding: 80px 8%;
-}
-
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -440,12 +484,13 @@ nav a:hover::after {
 }
 
 .footer-logo {
-    width: 90px;
-    border-radius: 50%;
-    margin-bottom: 15px;
+    width: 150px;
+    border-radius: 100%;
+    margin-bottom: 5px;
 }
 
-.footer h3, .footer h4 {
+.footer h3,
+.footer h4 {
     margin-bottom: 15px;
 }
 
@@ -458,6 +503,27 @@ nav a:hover::after {
     color: #ffffff;
 }
 
+/* ================= FOOTER ================= */
+.footer {
+    background: #070707ed;
+    padding: 150px 8%;
+    color: #ffffff;
+    /* 👈 ADD THIS */
+}
+
+/* Make all text inside footer white */
+.footer h3,
+.footer h4,
+.footer p,
+.footer li,
+.footer a {
+    color: #ffffff;
+}
+
+/* Remove underline from links */
+.footer a {
+    text-decoration: none;
+}
 
 
 @media (max-width: 992px) {
@@ -501,13 +567,27 @@ nav a:hover::after {
     }
 }
 
+.footer h3,
+.footer h4 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.footer p,
+.footer li,
+.footer a {
+    font-size: 20px;
+    font-weight: 600;
+}
+
 
 
 /* ================= ABOUT PAGE ================= */
 
 .about-section {
     padding: 140px 8% 100px;
-    background: #fed9d9;
+    background: #898989;
     color: #000000;
 }
 
@@ -525,7 +605,7 @@ nav a:hover::after {
 .about-image img {
     width: 100%;
     border-radius: 25px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px rgb(111, 103, 103);
 }
 
 .about-content {
@@ -561,7 +641,7 @@ nav a:hover::after {
 }
 
 .highlight-box {
-    background: linear-gradient(45deg, #00eaff, #0072ff);
+    background: linear-gradient(45deg, #1eff00, #0072ff);
     color: #000000;
 }
 
@@ -595,15 +675,89 @@ nav a:hover::after {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;   /* 👈 Reduce this value (5px–10px ideal) */
+    gap: 10px;
+    /* 👈 Reduce this value (5px–10px ideal) */
 }
 
 .logo img {
-    width: 60px;   /* adjust if needed */
+    width: 60px;
+    /* adjust if needed */
 }
 
 .logo h1 {
     font-size: 20px;
     font-weight: 700;
     margin: 0;
+}
+
+
+
+
+/* ================= FLOATING WHATSAPP BUTTON ================= */
+
+.floating-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: white;
+    font-size: 26px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    transition: 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ================= MAP ================= */
+.map-section {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 450px;
+    display: auto;
+}
+
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+
+.hero-slider {
+    padding: 0 !important;
+}
+
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: inherit;
 }
