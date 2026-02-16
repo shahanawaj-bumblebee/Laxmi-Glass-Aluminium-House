@@ -7,9 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laxmi Glass & Aluminium House</title>
     <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'website/css/responsive.css' %}">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="{% static 'website/js/main.js' %}"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="{% static 'website/images/favicon.png' %}">
 </head>
 
 <body>
@@ -17,14 +20,15 @@
     <!-- NAVBAR -->
     <header class="navbar">
         <div class="nav-brand">
-            <div class="logo-circle">
-                <img src="{% static 'website/images/logo.png' %}" alt="Laxmi Glass & Aluminium House Logo">
-            </div>
-            <h1 class="brand-text">
-                LAXMI GLASS <span>&</span> ALUMINIUM HOUSE
-            </h1>
+            <a href="{% url 'home' %}" class="logo-link">
+                <div class="logo-circle">
+                    <img src="{% static 'website/images/logo.png' %}" alt="Logo">
+                </div>
+                <h1 class="brand-text">
+                    LAXMI GLASS <span>&</span> ALUMINIUM HOUSE
+                </h1>
         </div>
-
+        </a>
         <nav>
             <a href="{% url 'home' %}">Home</a>
             <a href="{% url 'about_us' %}">About us</a>
@@ -38,40 +42,78 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-left">
+    <section class="hero-slider">
+
+        <!-- SLIDES -->
+        <div class="slides">
+
+            <div class="slide">
+                <img src="{% static 'website/images/slide1.jpg' %}" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="{% static 'website/images/slide2.jpg' %}" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="{% static 'website/images/slide3.jpg' %}" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="{% static 'website/images/slide4.jpg' %}" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="{% static 'website/images/slide5.jpg' %}" alt="">
+            </div>
+
+        </div>
+
+        <!-- HERO CONTENT -->
+        <div class="hero-content">
             <h1>
                 Premium<br>
                 Aluminium,<br>
                 Glass & Interior<br>
                 Solutions
             </h1>
+
             <p>
                 We deliver high-quality aluminium fabrication, glass work,
                 and interior design with competitive pricing and
                 on-time execution.
             </p>
 
-            <div class="buttons">
-                <a href="https://wa.me/918920912449?text=Hello I am interested in your services" target="_blank" <button
-                    class="btn primary"></button>
-                    WhatsApp
+            <div class="hero-buttons">
+
+                <!-- WhatsApp Channel -->
+                <a href="https://whatsapp.com/channel/0029VbCQLn6Lo4hgysQeQo0I" target="_blank" class="btn btn-channel">
+                    <i class="fab fa-whatsapp"></i> Follow Our Channel
                 </a>
 
+                <!-- WhatsApp Group -->
+                <a href="https://chat.whatsapp.com/FdOMav8Ygcf0E7WbyOKMsf" target="_blank" class="btn btn-group">
+                    <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+                </a>
 
             </div>
         </div>
 
-        <div class="hero-right">
-            <img src="{% static 'website/images/hero.jpg' %}" alt="hero">
-            <a href="{% url 'portfolio' %}" class="btn view-work">
-                View Our Work
-            </a>
+        <!-- ARROWS -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
 
+        <!-- DOTS -->
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
 
-
     </section>
+
 
     <!-- PORTFOLIO SECTION -->
     <section class="portfolio">
@@ -101,37 +143,45 @@
 
 
     <div class="hero-left animate fade-left">
-        ...
+
     </div>
 
     <div class="hero-right animate fade-right">
-        ...
+
     </div>
 
 
-    <section class="why-us ">
-        <h2>WHY CHOOSE US</h2>
-        <p class="subtitle">Your trusted partner for quality and reliability</p>
+    <section class="about-section">
+        <div class="about-container">
 
-        <div class="why-content">
-            <div class="why-image" data-aos="fade-right">
+            <div class="about-image">
                 <img src="{% static 'website/images/choose us.jpg' %}" alt="Why Choose Us">
             </div>
 
-            <div class="why-item" data-aos="zoom-in">
-                <h3>🏗 Expertise You Can Trust</h3>
-                <p>We bring years of hands-on experience in aluminium fabrication, glass solutions, and interior design.
-                    From concept to completion, every project is handled with precision and care.
+            <div class="about-content">
+                <h2>WHY CHOOSE US</h2>
+                <p class="about-subtitle">
+                    Your trusted partner for quality and reliability
                 </p>
-            </div>
 
-            <div class="why-item" data-aos="zoom-in" data-aos-delay="150">
-                <h3>💰 Competitive & Transparent Pricing</h3>
-                <p>No hidden costs. No surprises.</p>
-            </div>
+                <div class="about-box">
+                    <h3>🏗 Expertise You Can Trust</h3>
+                    <p>
+                        We bring years of hands-on experience in aluminium fabrication,
+                        glass solutions, and interior design. From concept to completion,
+                        every project is handled with precision and care.
+                    </p>
+                </div>
 
-            <div class="why-item" data-aos="zoom-in" data-aos-delay="300">
-                <h3 class="highlight">⏰ Service Hours: 24×7 Available</h3>
+                <div class="about-box">
+                    <h3>💰 Competitive & Transparent Pricing</h3>
+                    <p>No hidden costs. No surprises.</p>
+                </div>
+
+                <div class="about-box highlight-box">
+                    <h3>⏰ 24×7 Service Available</h3>
+                </div>
+
             </div>
 
         </div>
@@ -139,50 +189,22 @@
 
 
 
-
     <section class="services">
         <h2>Our Services</h2>
 
         <div class="services-grid">
+            {% for service in services %}
             <div class="service-card">
-                <img src="{% static 'website/images/alums.jpg' %}">
-                <h3>Aluminium Windows</h3>
-                <ul>
-                    <li>Windows</li>
-                    <li>Doors</li>
-                    <li>Structural Glazing</li>
-                </ul>
-            </div>
+                {% if service.image %}
+                <img src="{{ service.image.url }}" alt="{{ service.name }}">
+                {% endif %}
 
-            <div class="service-card">
-                <img src="{% static 'website/images/window.jpg' %}">
-                <h3>Window Glass</h3>
-                <ul>
-                    <li>Toughened Glass</li>
-                    <li>Glass Partitions</li>
-                    <li>Railings</li>
-                </ul>
+                <h3>{{ service.name }}</h3>
+                <p>{{ service.description }}</p>
             </div>
-
-            <div class="service-card">
-                <img src="{% static 'website/images/acp.jpg' %}">
-                <h3>ACP Sheet</h3>
-                <ul>
-                    <li>ACP Cladding</li>
-                    <li>Aluminium Work</li>
-                    <li>Panel Work</li>
-                </ul>
-            </div>
-
-            <div class="service-card">
-                <img src="{% static 'website/images/hpl.jpg' %}">
-                <h3>HPL Sheet</h3>
-                <ul>
-                    <li>Exterior Cladding</li>
-                    <li>Interior Surfacing</li>
-                    <li>Furniture & Fixtures</li>
-                </ul>
-            </div>
+            {% empty %}
+            <p>No services added yet.</p>
+            {% endfor %}
         </div>
     </section>
 
@@ -207,8 +229,7 @@
                     <label>Name <span>*</span></label>
                     <div class="name-row">
                         <input type="hidden" name="access_key" value="0ba04290-3d21-48bd-b818-cf62cf36240f">
-                        <input type="text" name="first_name" placeholder="First" required>
-                        <input type="text" name="last_name" placeholder="Last" required>
+                        <input type="text" name="Name" placeholder="Name" required>
                     </div>
 
                     <label>Email <span>*</span></label>
@@ -232,39 +253,40 @@
     </section>
 
 
+    <!-- ================= TESTIMONIALS ================= -->
     <section class="testimonials">
-        <h2>WHAT OUR CLIENTS SAY ABOUT US</h2>
+        <h2>Testimonials</h2>
 
         <div class="testimonial-grid">
-            <div class="testimonial-card ">
-                ⭐⭐⭐⭐⭐
-                <p>
-                    “Product Quality are very best, My Home Railing are very strong & Beautiful.”
-                </p>
-                <span>- Rahul </span>
-            </div>
-
-            <div class="testimonial-card ">
-                ⭐⭐⭐⭐⭐
-                <p>
-                    “People love recommended me soo much , By their feedback
-                    i visit and i am Satisfied with their Work ”
-                </p>
-                <span>- Kartik Kumar</span>
-            </div>
-
+            {% for testimonial in testimonials %}
             <div class="testimonial-card">
-                ⭐⭐⭐⭐⭐
-                <p>
-                    “Excellent service, professional team and timely delivery.”
-                </p>
-                <span>- Radheshyam Tyagi</span>
+
+                {% if testimonial.image %}
+                <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}">
+                {% endif %}
+
+                <h3>{{ testimonial.name }}</h3>
+                <p>"{{ testimonial.review }}"</p>
+                <p>⭐ {{ testimonial.rating }}/5</p>
+
             </div>
+            {% empty %}
+            <p>No testimonials added yet.</p>
+            {% endfor %}
         </div>
     </section>
 
 
-    <section class="contact-section"></section>
+
+
+
+    <!-- ===== GOOGLE MAP SECTION ===== -->
+    <section class="map-section">
+        <iframe src="https://www.google.com/maps?q=Dadri%20Uttar%20Pradesh&output=embed" width="100%" height="400"
+            style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </section>
+
     <footer class="footer">
         <div class="footer-grid">
 
@@ -284,13 +306,15 @@
             <div>
                 <h4>Our Services</h4>
                 <ul>
-                    <li>Aluminium Windows & Doors</li>
+                   <li>Aluminium Windows & Doors</li>
                     <li>Glass Partitions</li>
-                    <li>ACP Sheet </li>
+                    <li>ACP Sheet</li>
                     <li>Glass Railings</li>
-                    <li>HPL Sheet</li>
-                    <li>SS Railing</li>
-                    <li>UPVC Sheet</li>
+                    <li>Safety Glass</li>
+                    <li>UPVC Windows & Doors</li>
+                    <li>Toughened & Laminated Glass</li>
+                    <li>Industrial Glass</li>
+                    <li>Decorative Glass</li>
                 </ul>
             </div>
 
@@ -298,7 +322,7 @@
                 <h4>Contact Us</h4>
                 <p>📞 +91-8920912449</p>
                 <p>📞 +91-7906232665</p>
-                <p>✉️ laxmi@gmail.com</p>
+                <p>✉️ laxmi12glass@gmail.com</p>
                 <p>📍 GGVR+758, Katheda Rd, Pink City Colony, Dadri, Uttar Pradesh 203207</p>
             </div>
 
@@ -321,6 +345,50 @@
             offset: 120
         });
     </script>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector(".slides");
+        const totalSlides = document.querySelectorAll(".slide").length;
+        const dots = document.querySelectorAll(".dot");
+
+        function showSlide(index) {
+            if (index >= totalSlides) currentIndex = 0;
+            else if (index < 0) currentIndex = totalSlides - 1;
+            else currentIndex = index;
+
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            dots.forEach(dot => dot.classList.remove("active"));
+            dots[currentIndex].classList.add("active");
+        }
+
+        document.querySelector(".next").onclick = () => {
+            showSlide(currentIndex + 1);
+        };
+
+        document.querySelector(".prev").onclick = () => {
+            showSlide(currentIndex - 1);
+        };
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                showSlide(index);
+            });
+        });
+
+        setInterval(() => {
+            showSlide(currentIndex + 1);
+        }, 5000);
+
+        showSlide(0);
+    </script>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/918920912449?text=Hello I am interested in your services" class="floating-whatsapp"
+        target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 </body>
 

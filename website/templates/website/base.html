@@ -1,38 +1,82 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
     <title>Laxmi Glass & Aluminium House</title>
     <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-    <div class="nav-brand">
-    <div class="logo-circle">
-      <img src="{% static 'website/images/logo.png' %}" alt="Laxmi Glass & Aluminium House Logo">
-    </div>
-    <h1 class="brand-text">
-      LAXMI GLASS <span>&</span> ALUMINIUM HOUSE
-    </h1>
-  </div>
-        
-  <nav>
-    <a href="{% url 'home' %}">Home</a>
-    <a href="{% url 'about_us' %}">About us</a>
-    <a href="{% url 'products' %}">Products</a>
-    <a href="{% url 'services' %}">Services</a>
-    <a href="{% url 'contact_us' %}">Contact Us</a>
- </nav>
+    <header class="navbar">
+         <div class="nav-brand">
+            <a href="{% url 'home' %}" class="logo-link">
+                <div class="logo-circle">
+                    <img src="{% static 'website/images/logo.png' %}" alt="Logo">
+                </div>
+                <h1 class="brand-text">
+                    LAXMI GLASS <span>&</span> ALUMINIUM HOUSE
+                </h1>
+        </div>
+        </a>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about_us' %}">About</a>
+            <a href="{% url 'products' %}">Products</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'contact_us' %}">Contact</a>
+        </nav>
+    </header>
 
-    
 
-</header>
+    {% block content %}{% endblock %}
 
-<!-- PAGE CONTENT -->
-{% block content %}{% endblock %}
+    <footer class="footer">
+        <div class="footer-grid">
+
+            <div>
+                <img src="{% static 'website/images/logo.png' %}" class="footer-logo">
+                <h3>Laxmi Glass & Aluminium House</h3>
+                <p>Your trusted partner for premium aluminium & glass solutions.</p>
+            </div>
+
+            <div>
+                <h4>Our Services</h4>
+                <ul>
+                    <li>Aluminium Windows & Doors</li>
+                    <li>Glass Partitions</li>
+                    <li>ACP Sheet</li>
+                    <li>Glass Railings</li>
+                    <li>Safety Glass</li>
+                    <li>UPVC Windows & Doors</li>
+                    <li>Toughened & Laminated Glass</li>
+                    <li>Industrial Glass</li>
+                    <li>Decorative Glass</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p>📞 +91-8920912449</p>
+                <p>📞 +91-7906232665</p>
+                <p>✉️ laxmi12glass@gmail.com</p>
+                <p>📍 GGVR+758, Katheda Rd, Pink City Colony, Dadri, Uttar Pradesh 203207</p>
+            </div>
+
+            <div class="footer-cta">
+                <h2>Let's Build Something<br>Strong & Beautiful<br>Together</h2>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="{% static 'website/js/main.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
 
 </body>
+
 </html>
