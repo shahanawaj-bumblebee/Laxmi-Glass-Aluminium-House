@@ -791,7 +791,7 @@ nav a:hover::after {
 .footer {
     background: #ada5a5;
     color: #000000;
-    padding: 20px 50px 20px;
+    padding: 30px 50px 20px;
     font-family: Arial, sans-serif;
 }
 
@@ -806,7 +806,7 @@ nav a:hover::after {
 
 .footer-col h3 {
     margin-bottom: 15px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
 }
 
@@ -817,7 +817,7 @@ nav a:hover::after {
 
 .footer-col ul li {
     margin-bottom: 8px;
-    font-size: 14px;
+    font-size: 16px;
     color: #000000;
     cursor: pointer;
     transition: 0.3s;
@@ -829,7 +829,7 @@ nav a:hover::after {
 }
 
 .logo-col h2 {
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 10px;
 }
 
@@ -860,6 +860,10 @@ nav a:hover::after {
     color: #ffffff;
     border-top: 1px solid #b2acac;
     padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 16px;
 }
 
 /* Responsive */
