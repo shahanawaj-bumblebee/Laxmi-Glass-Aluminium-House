@@ -5,11 +5,16 @@ def home(request):
     services = Service.objects.all()
     testimonials = Testimonial.objects.all()
 
-    return render(request, "website/index.html", {
+    return render(request, 'website/index.html', {
         "services": services,
         "testimonials": testimonials
     })
 
+def services(request):
+    services = Service.objects.all()
+    return render(request, 'website/services.html', {
+        'services': services
+    })
 
 def about(request):
     return render(request, 'website/about.html')
@@ -17,16 +22,8 @@ def about(request):
 def products(request):
     return render(request, 'website/products.html')
 
-def services(request):
-    return render(request, 'website/services.html')
-
 def contact(request):
     return render(request, 'website/contact.html')
 
 def portfolio(request):
     return render(request, 'website/portfolio.html')
-
-
-
-
-# Create your views here.

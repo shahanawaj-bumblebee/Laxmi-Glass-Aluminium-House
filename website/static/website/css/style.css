@@ -40,7 +40,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 8%;
+    padding: 5px 7%;
     position: fixed;
     width: 100%;
     top: 0;
@@ -74,7 +74,7 @@ h2 {
 }
 
 .brand-text {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 800;
     letter-spacing: 1px;
 }
@@ -264,65 +264,75 @@ nav a:hover::after {
 }
 
 
-/* ================= PORTFOLIO ================= */
+/* ================= PORTFOLIO SECTION ================= */
 
 .portfolio {
-    padding: 120px 8%;
-    background: #f4f6f9;
+    padding: 80px 10%;
     text-align: center;
+    background: #f8f9fb;
 }
 
 .portfolio h2 {
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 10px;
 }
 
-.portfolio p {
-    color: #555;
-    margin-bottom: 60px;
+.portfolio .subtitle {
+    color: #666;
+    margin-bottom: 50px;
 }
 
+/* GRID */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 30px;
 }
 
-/* Card Design */
-.portfolio-card {
-    background: #ffffff;
-    border-radius: 25px;
+/* Make tall images span 2 rows */
+.portfolio-item.tall {
+    grid-row: span 2;
+}
+
+/* CARD STYLE */
+.portfolio-item {
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     transition: all 0.4s ease;
+    background: #fff;
 }
 
-/* Image */
-.portfolio-card img {
+/* IMAGE STYLE */
+.portfolio-item img {
     width: 100%;
-    height: 320px;
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
-/* Hover Effects */
-.portfolio-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+/* HOVER EFFECT */
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.portfolio-card:hover img {
+.portfolio-item:hover img {
     transform: scale(1.08);
 }
 
-/* Responsive */
 @media (max-width: 992px) {
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .portfolio-item.tall {
+        grid-row: span 1;
+    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
@@ -450,7 +460,7 @@ nav a:hover::after {
 /* ================= TESTIMONIALS ================= */
 .testimonials {
     padding: 80px 8%;
-    background: #c876db;
+    background: #b3c6ff;
     text-align: center;
 }
 
@@ -462,7 +472,7 @@ nav a:hover::after {
 }
 
 .testimonial-card {
-    background: white;
+    background: rgb(237, 219, 233);
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
@@ -476,54 +486,6 @@ nav a:hover::after {
 }
 
 
-/* ================= FOOTER ================= */
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-}
-
-.footer-logo {
-    width: 150px;
-    border-radius: 100%;
-    margin-bottom: 5px;
-}
-
-.footer h3,
-.footer h4 {
-    margin-bottom: 15px;
-}
-
-.footer ul {
-    list-style: none;
-    color: #ffffff;
-}
-
-.footer-cta h2 {
-    color: #ffffff;
-}
-
-/* ================= FOOTER ================= */
-.footer {
-    background: #827e7eed;
-    padding: 150px 8%;
-    color: #ffffff;
-    /* 👈 ADD THIS */
-}
-
-/* Make all text inside footer white */
-.footer h3,
-.footer h4,
-.footer p,
-.footer li,
-.footer a {
-    color: #ffffff;
-}
-
-/* Remove underline from links */
-.footer a {
-    text-decoration: none;
-}
 
 
 @media (max-width: 992px) {
@@ -565,20 +527,6 @@ nav a:hover::after {
     .footer-grid {
         grid-template-columns: 1fr;
     }
-}
-
-.footer h3,
-.footer h4 {
-    font-size: 30px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-.footer p,
-.footer li,
-.footer a {
-    font-size: 20px;
-    font-weight: 600;
 }
 
 
@@ -773,7 +721,7 @@ nav a:hover::after {
 
 .services {
     padding: 140px 8% 100px;
-    background: #f4f6f9;
+    background: #bad2f5;
     text-align: center;
 }
 
@@ -788,7 +736,7 @@ nav a:hover::after {
     background: white;
     border-radius: 25px;
     padding: 25px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
     transition: 0.4s ease;
 }
 
@@ -812,12 +760,12 @@ nav a:hover::after {
 .service-card ul li {
     margin-bottom: 8px;
     font-weight: 500;
-    color: #555;
+    color: #000000;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive */
@@ -832,3 +780,111 @@ nav a:hover::after {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #ada5a5;
+    color: #000000;
+    padding: 20px 50px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Grid */
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.footer-col h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #000000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-col ul li:hover {
+    color: #d40000;
+    transform: translateX(5px);
+}
+
+.logo-col h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.logo-col p {
+    font-size: 14px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+/* Bottom Section */
+.footer-bottom {
+    margin-top: 10px;
+}
+
+.contact-section h3 {
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-copy {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #ffffff;
+    border-top: 1px solid #b2acac;
+    padding-top: 20px;
+}
+
+/* Responsive */
+@media(max-width: 992px) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer Logo Fix */
+.footer-logo-box {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.footer-logo-box img {
+    width: 150%;
+    height: 150%;
+    object-fit: contain; /* important */
+}
+

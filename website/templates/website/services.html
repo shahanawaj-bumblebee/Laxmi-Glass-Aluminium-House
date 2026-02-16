@@ -4,50 +4,23 @@
 {% block content %}
 
 
-<section class="services">
-    <h2>Our Services</h2>
+ <section class="services">
+        <h2>Our Services</h2>
 
-    <div class="services-grid">
-        <div class="service-card">
-            <img src="{% static 'website/images/alums.jpg' %}">
-            <h3>Aluminium Windows</h3>
-            <ul>
-                <li>Windows</li>
-                <li>Doors</li>
-                <li>Structural Glazing</li>
-            </ul>
-        </div>
+        <div class="services-grid">
+            {% for service in services %}
+            <div class="service-card">
+                {% if service.image %}
+                <img src="{{ service.image.url }}" alt="{{ service.name }}">
+                {% endif %}
 
-        <div class="service-card">
-            <img src="{% static 'website/images/window.jpg' %}">
-            <h3>Window Glass</h3>
-            <ul>
-                <li>Toughened Glass</li>
-                <li>Glass Partitions</li>
-                <li>Railings</li>
-            </ul>
+                <h3>{{ service.name }}</h3>
+                <p>{{ service.description }}</p>
+            </div>
+            {% empty %}
+            <p>No services added yet.</p>
+            {% endfor %}
         </div>
-
-        <div class="service-card">
-            <img src="{% static 'website/images/acp.jpg' %}">
-            <h3>ACP Sheet</h3>
-            <ul>
-                <li>ACP Cladding</li>
-                <li>Aluminium Work</li>
-                <li>Panel Work</li>
-            </ul>
-        </div>
-
-        <div class="service-card">
-            <img src="{% static 'website/images/hpl.jpg' %}">
-            <h3>HPL Sheet</h3>
-            <ul>
-                <li>Exterior Cladding</li>
-                <li>Interior Surfacing</li>
-                <li>Furniture & Fixtures</li>
-            </ul>
-        </div>
-    </div>
-</section>
+    </section>
 
 {% endblock %}
