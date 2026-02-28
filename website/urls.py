@@ -4,7 +4,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
-
 urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about_us'),
@@ -12,7 +11,7 @@ urlpatterns = [
     path('contact/', views.contact, name='contact_us'),
     path('services/', views.services, name='services'),
     path('portfolio/', views.portfolio, name='portfolio'),
-    path('contact/', views.contact, name='contact'),
+    path('get-quote/', views.get_quote, name='get_quote'),
 ]
 
 if settings.DEBUG:
