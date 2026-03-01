@@ -3,16 +3,13 @@
 
 {% block content %}
 <section class="contact-section">
-    <div class="contact-container">
+    <div class="contact-container" style="justify-content:center;">
 
-        <!-- Left Image -->
-        <div class="contact-image">
-            <img src="{% static 'website/images/contact.jpg' %}" alt="Contact Support">
-        </div>
-
-        <!-- RIGHT FORM -->
-        <div class="contact-form-wrapper">
-            <h2>Contact Us</h2>
+        <div class="contact-form-wrapper" style="max-width:600px;width:100%;">
+            <h2>Get a Free Quote</h2>
+            <p style="margin-bottom:1.5rem;color:#555;">
+                Fill out the form below and our team will get back to you with a tailored estimate within 24 hours.
+            </p>
 
             {% if messages %}
             <div class="form-messages">
@@ -22,7 +19,7 @@
             </div>
             {% endif %}
 
-            <form action="{% url 'contact_us' %}" method="POST" class="contact-form">
+            <form action="{% url 'get_quote' %}" method="POST" class="contact-form">
                 {% csrf_token %}
 
                 {% for field in form %}
@@ -37,7 +34,7 @@
                 {% endif %}
                 {% endfor %}
 
-                <button type="submit">SUBMIT</button>
+                <button type="submit">REQUEST QUOTE</button>
             </form>
         </div>
 
